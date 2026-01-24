@@ -87,8 +87,8 @@ Parallel runs
 
 You can use a .env file:
 
-BASE_URL=https://example.com
-BROWSER=chromium
+BASE_URL=https://www.saucedemo.com
+BROWSER=chrome
 HEADLESS=true
 
 📌 Best Practices
