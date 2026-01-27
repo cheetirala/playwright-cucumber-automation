@@ -5,17 +5,17 @@ import { chromium, firefox, LaunchOptions, webkit } from '@playwright/test';
         ]
     }
 export const invokeBrowser = () => {
-    const browserType = process.env.npm_config_BROWSER || "chrome";
+    const browserType = process.env.npm_config_BROWSER || "chromium";
 
     switch (browserType) {
         case "chrome":
             return chromium.launch(options);
     
         case "firefox":
-            return firefox.launch(options);
+            return firefox.launch({ headless: false });
 
         case "webkit":
-            return webkit.launch(options);
+            return webkit.launch({ headless: false });
 
         default:
             throw new Error("Please use one of the known browsers");

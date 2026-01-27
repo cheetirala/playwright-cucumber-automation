@@ -1,4 +1,4 @@
-# 🎭 Playwright + 🥒 Cucumber Automation Framework
+# Playwright + Cucumber Automation Framework
 
 End-to-end test automation framework built using **Playwright**, **Cucumber (BDD)**, and **TypeScript**.
 
@@ -11,7 +11,7 @@ This project is designed for:
 
 ---
 
-## 🚀 Tech Stack
+## Tech Stack
 
 - **Playwright** – Browser automation  
 - **Cucumber** – BDD feature files  
@@ -21,7 +21,7 @@ This project is designed for:
 
 ---
 
-## 📁 Project Structure
+## Project Structure
 
 ```bash
 playwright-cucumber-automation
