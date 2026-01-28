@@ -18,7 +18,7 @@ try {
         jsonDir: "test-results",
         reportPath: "test-results/reports/",
         reportName: "Playwright Automation Report",
-        PageTitle: "SauceDemo app test report",
+        pageTitle: "SauceDemo app test report",
         displayDuration: false,
         metadata: {
           browser: {
@@ -43,17 +43,17 @@ try {
       console.log("Report generated successfully at test-results/reports/");
     } else {
       console.log("JSON file is empty. Skipping report generation.");
-      fs.ensureDirSync("test-results/reports");
+      fsx.ensureDirSync("test-results/reports");
     }
   } else {
     console.log("No cucumber-report.json file found. Skipping report generation.");
-    fs.ensureDirSync("test-results/reports");
+    fsx.ensureDirSync("test-results/reports");
   }
 } catch (error) {
   console.error("Error generating report: " + error);
   // Ensure reports folder exists even if report generation fails
   try {
-    fs.ensureDirSync("test-results/reports");
+    fsx.ensureDirSync("test-results/reports");
   } catch (dirError) {
     console.error("Failed to create reports folder: " + dirError);
   }

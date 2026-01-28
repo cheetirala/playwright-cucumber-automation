@@ -10,7 +10,7 @@
     "test:failed": "cucumber-js -p rerun @rerun.txt"
   },
   "keywords": [],
-  "author": "",
+  "author": "Koteswara Cheetirala",
   "license": "ISC",
   "type": "commonjs",
   "devDependencies": {

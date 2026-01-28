@@ -1,7 +1,8 @@
 const fs = require("fs-extra");
 
 try {
-    fs.ensureDir("test-results");
+    fs.ensureDirSync("test-results");
+    fs.emptyDirSync("test-results");
 } catch (error) {
     console.log("Folder not created! " + error);
 }
