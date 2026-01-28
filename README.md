@@ -21,6 +21,13 @@ This project is designed for:
 
 ---
 
+## Test Execution
+Tests can be executed with command
+npm run test
+
+To use a specific browser
+npm run test --BROWSER="chrome"
+
 ## Project Structure
 
 ```bash
@@ -42,8 +49,3 @@ playwright-cucumber-automation
 ├── tsconfig.json
 └── package.json
 
-Tests can be executed with command
-npm run test
-
-To use a specific browser
-npm run test --BROWSER="chrome"
