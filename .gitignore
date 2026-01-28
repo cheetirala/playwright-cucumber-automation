@@ -8,6 +8,4 @@ node_modules/
 /playwright/.auth/
 /test-results/
 cucumber-report.html
-assets
-features
 @rerun.txt
