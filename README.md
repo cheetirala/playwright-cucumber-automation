@@ -1,4 +1,4 @@
-# Playwright + Cucumber Automation Framework
+# Playwright with Typescript and Cucumber Automation Framework
 
 End-to-end test automation framework built using **Playwright**, **Cucumber (BDD)**, and **TypeScript**.
 
