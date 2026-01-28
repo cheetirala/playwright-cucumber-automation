@@ -1,4 +1,4 @@
-# Playwright + Cucumber Automation Framework
+# Playwright with Typescript and Cucumber Automation Framework
 
 End-to-end test automation framework built using **Playwright**, **Cucumber (BDD)**, and **TypeScript**.
 
@@ -21,6 +21,13 @@ This project is designed for:
 
 ---
 
+## Test Execution
+Tests can be executed with command
+npm run test
+
+To use a specific browser
+npm run test --BROWSER="chrome"
+
 ## Project Structure
 
 ```bash
@@ -41,3 +48,4 @@ playwright-cucumber-automation
 │
 ├── tsconfig.json
 └── package.json
+
