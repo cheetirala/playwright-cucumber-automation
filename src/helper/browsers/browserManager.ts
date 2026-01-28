@@ -1,6 +1,6 @@
 import { chromium, firefox, LaunchOptions, webkit } from '@playwright/test';
 const options: LaunchOptions = {
-    headless: false, args: [
+    headless: true, args: [
         '--disable-features=PasswordLeakDetection,PasswordManagerOnboarding'
     ]
 }
@@ -19,10 +19,10 @@ export const invokeBrowser = () => {
             return chromium.launch({ ...options, channel: 'msedge' });
 
         case "firefox":
-            return firefox.launch({ headless: false });
+            return firefox.launch({ headless: true });
 
         case "webkit":
-            return webkit.launch({ headless: false });
+            return webkit.launch({ headless: true });
 
         default:
             throw new Error("Please use | chrome | edge | firefox | webkit");
