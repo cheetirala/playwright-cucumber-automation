@@ -1,5 +1,5 @@
 const report = require("multiple-cucumber-html-reporter");
-const fsx: any = require("fs-extra");
+const fsx = require("fs-extra");
 const path = require("path");
 
 try {

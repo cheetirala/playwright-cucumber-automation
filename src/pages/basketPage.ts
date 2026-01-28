@@ -17,7 +17,7 @@ export default class BasketPage {
     }
 
     async addProductToBasket() {
-        this.page.locator(this.elements.addToBasketButton).click();
+        await this.page.locator(this.elements.addToBasketButton).click();
     }
 
     async getBasketBadgeCount(): Promise<string> {
@@ -26,6 +26,6 @@ export default class BasketPage {
     }
 
     async navigateToBasketPage() {
-        this.page.locator(this.elements.basketLink).click();
+        await this.page.locator(this.elements.basketLink).click();
     }
 }
