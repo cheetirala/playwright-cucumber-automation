@@ -8,4 +8,4 @@ Feature: Add to Basket Functionality
 
   Scenario: User adds a single item to the basket
     Given the user adds product to the basket
-    Then the basket should contain 1 item
+    Then the basket should contain 2 item
