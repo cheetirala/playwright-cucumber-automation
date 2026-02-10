@@ -1,9 +1,9 @@
 import { Given, When, Then, setDefaultTimeout } from '@cucumber/cucumber';
 
 import { expect } from '@playwright/test';
-import { fixture } from '../../hooks/fixture';
 import LoginPage from '../../pages/loginPage';
-import { log } from 'node:console';
+import AxeBuilder from '@axe-core/playwright'
+import { fixture } from '../../hooks/fixture';
 
 let loginPage: LoginPage;
 
@@ -14,6 +14,12 @@ Given('the user navigate to Saucedemo', async function () {
     await loginPage.goToLoginPage(process.env.BASEURL || 'https://www.saucedemo.com/');
     fixture.logger.info('Navigated to Saucedemo');
 });
+
+Given('should not have any automatically detectable accessible issues', async function (this: any) {
+    const accessibilityScanResults = await new AxeBuilder({ page: fixture.page }).withTags(['wcag2a', 'wcag2aa', 'wcag21a', 'wcag21aa', 'wcag22a', 'wcag22aa']).analyze();
+    await this.attach('accessibility-scan-results', { body: JSON.stringify(accessibilityScanResults, null, 2), contentType: 'application/json'});
+    expect(accessibilityScanResults.violations).toEqual([]);
+})
 
 When('the user enters valid username and password', async function () {
     await loginPage.enterUsername('standard_user');
