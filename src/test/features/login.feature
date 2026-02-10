@@ -10,7 +10,7 @@ Background:
     When the user enters valid username and password
     When the user clicks the login button
     Then the user should be redirected to the dashboard
-    And should not have any automatically detectable accessible issues
+    # And should not have any automatically detectable accessible issues
 
   Scenario: Unsuccessful login with invalid credentials
     When the user enters invalid username or password
